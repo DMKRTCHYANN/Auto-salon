@@ -1,5 +1,5 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
+import {ref, computed} from 'vue'
+import {defineStore} from 'pinia'
 
 export const useCarStore = defineStore('car', () => {
     const selectedType = ref('sedan')
@@ -93,7 +93,96 @@ export const useCarStore = defineStore('car', () => {
             price: "$130,000",
             image: "/images/cars/rsq8.webp",
         },
+        {
+            name: "Zeekr",
+            type: "Convertible",
+            model: "Zeekr 009  – 2024",
+            description: "Premium Package",
+            mileage: "22 Miles",
+            engine: "Electric",
+            transmission: "Automatic",
+            price: "$190,000",
+            image: "/images/cars/009.jpg",
+        },
+        {
+            name: "Hyundai Staria",
+            type: "Convertible",
+            model: "Hyundai Staria  – 2024",
+            description: "Premium Package",
+            mileage: "22 Miles",
+            engine: "Petrol",
+            transmission: "Automatic",
+            price: "$50,000",
+            image: "/images/cars/hyundai.webp",
+        },
+        {
+            name: "Volkswagen ID. Buzz",
+            type: "Convertible",
+            model: "Volkswagen ID. Buzz  – 2021",
+            description: "Premium Package",
+            mileage: "22 Miles",
+            engine: "Electric",
+            transmission: "Automatic",
+            price: "$81,000",
+            image: "/images/cars/id.jpg",
+        },
+        {
+            name: "Lexus LM",
+            type: "Convertible",
+            model: "Lexus LM – 2023",
+            description: "Premium Package",
+            mileage: "22 Miles",
+            engine: "Petrol",
+            transmission: "Automatic",
+            price: "$81,000",
+            image: "/images/cars/lm.jpg",
+        },
+        {
+            name: "Toyota",
+            type: "Hatchback",
+            model: "Toyota Corolla – 2020",
+            description: "Premium Package",
+            mileage: "22 Miles",
+            engine: "Petrol",
+            transmission: "Automatic",
+            price: "$31,000",
+            image: "/images/cars/corolla.webp",
+        },
+        {
+            name: "Volkswagen",
+            type: "Hatchback",
+            model: "Volkswagen Golf – 2022",
+            description: "Premium Package",
+            mileage: "22 Miles",
+            engine: "Petrol",
+            transmission: "Automatic",
+            price: "$53,000",
+            image: "/images/cars/golf.webp",
+        },
+        {
+            name: "Honda",
+            type: "Hatchback",
+            model: "Honda Civic type r – 2022",
+            description: "Premium Package",
+            mileage: "22 Miles",
+            engine: "Petrol",
+            transmission: "Automatic",
+            price: "$50,000",
+            image: "/images/cars/honda.jpg",
+        },
+        {
+            name: "Mazda",
+            type: "Hatchback",
+            model: "Mazda 3 – 2022",
+            description: "Premium Package",
+            mileage: "22 Miles",
+            engine: "Petrol",
+            transmission: "Automatic",
+            price: "$31.000",
+            image: "/images/cars/mazda.jpg",
+        },
     ])
+
 
     const filteredCars = computed(() =>
         cars.value.filter(car => car.type.toLowerCase() === selectedType.value)
